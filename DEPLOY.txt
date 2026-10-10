@@ -1,0 +1,28 @@
+HOW TO DEPLOY ON VERCEL (fix for 404)
+========================================
+
+1. Extract this zip completely
+
+2. Go to https://vercel.com/new
+
+3. IMPORTANT: Upload the CONTENTS of the "retrobowl-vercel" folder
+   (index.html must be at the ROOT of what you upload)
+
+   Correct structure when uploading:
+     index.html
+     vercel.json
+     package.json
+     html5game/
+       RetroBowl.js
+       ...etc
+
+   WRONG (causes 404):
+     retrobowl-vercel/
+       index.html
+       html5game/
+
+4. Or use CLI from inside the folder:
+   cd retrobowl-vercel
+   npx vercel --yes
+
+5. After deploy, visit your URL

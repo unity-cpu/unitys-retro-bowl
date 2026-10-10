@@ -2,17 +2,13 @@
 
 ## Deploy to Vercel
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. In this folder run: `vercel`
-3. Follow the prompts
+1. Upload this folder to [vercel.com/new](https://vercel.com/new)
+2. **Set the admin password** in Vercel project settings:
+   - Go to Project → Settings → Environment Variables
+   - Add: `ADMIN_PASSWORD` = your secret password
+   - Redeploy
 
-Or drag-and-drop this folder onto [vercel.com/new](https://vercel.com/new)
-
-## Admin Panel
-
-- Click **Admin** in the top bar
-- Default password: `admin123`
-- Change it in `index.html` → search for `ADMIN_PASSWORD`
+If `ADMIN_PASSWORD` is not set, it defaults to `admin123`.
 
 ## Local
 
@@ -21,3 +17,5 @@ npx serve .
 # or
 python -m http.server 8000
 ```
+
+Local fallback password is still `admin123` (API may not run locally without `vercel dev`).
